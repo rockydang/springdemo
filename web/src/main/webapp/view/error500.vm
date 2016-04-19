@@ -1,0 +1,40 @@
+
+#parse("common/head_v1.vm")
+<link href="${rc.contextPath}/assets/stylesheets/pages.min.css" rel="stylesheet" type="text/css">
+<body class="page-500">
+
+<script>var init = [];</script>
+
+	<div class="header">
+		<a href="${rc.contextPath}/index.shtml" class="logo">
+			<div class="demo-logo"><img src="${rc.contextPath}/assets/demo/logo-big.png" alt="" style="margin-top: -4px;"></div>&nbsp;
+			<strong>麦田</strong>运营系统
+		</a> <!-- / .logo -->
+	</div> <!-- / .header -->
+
+	<div class="error-code">500</div>
+
+	<div class="error-text">
+		<span class="oops">页面出现错误。</span><br>
+		<span class="hr"></span>
+		<br>
+		请联系开发同学，@小稻 、@卓轩 、@顺风
+	</div> <!-- / .error-text -->
+
+	<form action="" class="search-form">
+		<input type="button" value="前往控制台" class="search-btn" onclick="javascript:location.href='${rc.contextPath}/index.shtml'">
+	</form> <!-- / .search-form -->
+
+<script src="${rc.contextPath}/assets/js/jquery-2.0.3.min.js"></script>
+<script src="assets/javascripts/bootstrap.min.js"></script>
+<script src="assets/javascripts/pixel-admin.min.js"></script>
+
+<script type="text/javascript">
+	init.push(function () {
+		// Javascript code here
+	})
+	window.PixelAdmin.start(init);
+</script>
+
+</body>
+</html>

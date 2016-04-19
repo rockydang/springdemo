@@ -1,0 +1,39 @@
+
+#parse("common/head_v1.vm")
+
+<body class="theme-purple-hills main-menu-animated main-navbar-fixed  animate-mm-sm animate-mm-md animate-mm-lg">
+
+
+
+#parse("common/main_nav_menu_v1.vm")
+<div id="main-wrapper">
+
+	<div id="content-wrapper">
+			<ul class="breadcrumb breadcrumb-page">
+				<div class="breadcrumb-label text-light-gray">您当前的位置: </div>
+				<li><a href="index.shtml#">Home</a></li>
+				<li class="active"><a href="index.shtml#">控制面板</a></li>
+			</ul>
+			<!-- 资源位按照分类展示 -->
+			<div class="row-furid panel-body" style="margin-top:30px;">
+
+           </div>
+
+
+	</div>
+
+</div>
+
+
+<!-- Pixel Admin's javascripts -->
+
+<script src="${rc.contextPath}/assets/js/jquery-2.0.3.min.js"></script>
+<script src="${rc.contextPath}/assets/javascripts/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+#parse("common/head_v1.vm")
+
+<body class="theme-purple-hills main-menu-animated main-navbar-fixed  animate-mm-sm animate-mm-md animate-mm-lg">
+
+
+
+    #parse("common/main_nav_menu_v1.vm")
+<div id="main-wrapper">
+
+    <div id="content-wrapper">
+        <ul class="breadcrumb breadcrumb-page">
+            <div class="breadcrumb-label text-light-gray">您当前的位置: </div>
+            <li><a href="index.shtml#">Home</a></li>
+            <li class="active"><a href="index.shtml#">欢迎页</a></li>
+        </ul>
+        <!--
+        <!删除 资源位按照分类展示>
+        <div class="row-furid panel-body" style="margin-top:30px;">
+            <div class="cols-xs-12">
+                <ol class="nav nav-tabs" >
+                    <li  class="active" >
+                        <a href="#">市场列表</a>
+                    </li>
+                    <li><a href="#">标签列表</a></li>
+                </ol>
+            </div>
+        </div>
+-       -->
+
+##        <div class="table-light panel-body" style="padding:0px;">
+            <div class="jumbotron">
+                <h1>welcome!</h1>
+            </div>
+           <!-- <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th style="width:80px;">市场ID</th>
+                    <th>市场名称</th>
+                    <th>市场代码</th>
+                    <th>负责人</th>
+                    <th>基础规则</th>
+                    <th>市场用户标</th>
+                    <th>商家归属标</th>
+                    <th>市场商品标</th>
+                    <th style="width:350px;">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                    #foreach($market in $!list)
+                    <tr>
+                        <td>$!market.marketId</td>
+                        <td>$!market.name</td>
+                        <td>$!market.code</td>
+                        <td>$!market.manager</td>
+                        #if($!market.baseRule==1)
+                            <td>标签(商家)</td>
+                        #elseif($!market.baseRule==2)
+                            <td>类目</td>
+                        #elseif($!market.baseRule==3)
+                            <td>标签(商品)</td>
+                        #else
+                            <td></td>
+                        #end
+                        <td>$!market.ownerUserTag</td>
+                        <td>$!market.userTag</td>
+                        <td>$!market.itemTag</td>
+                        <th>
+                            #if($!roleValidation.hasDefinitionOpreate($!loginUser.unick,$!market.manager))
+                                <a href="${rc.contextPath}/marketConfig/initEdit.shtml?mid=$!market.marketId&edit=1" class="btn btn-sm btn-primary" data-marketId="$!market.marketId">基本编辑</a>
+                                <!删除<a href="${rc.contextPath}/marketConfig/shopInitEdit.shtml?mid=$!market.marketId" class="btn btn-sm btn-warning" data-marketId="$!market.marketId">商家编辑</a>>
+                                <a href="http://fcategory.mogujie.org/index?marketId=$!market.marketId" target="_bank" class="btn btn-sm btn-warning">前台类目</a>
+                            #end
+                        </th>
+                    </tr>
+                    #end
+                </tbody>
+            </table>-->
+##        </div>
+        <!--
+        #parse("common/page.vm")-->
+        <!-- 资源位按照分类展示 end -->
+    </div>
+
+</div>
+
+
+<!-- Pixel Admin's javascripts -->
+
+<script src="${rc.contextPath}/assets/js/jquery-2.0.3.min.js"></script>
+<script src="${rc.contextPath}/assets/javascripts/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>

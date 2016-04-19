@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mogujie.service.arkmaster.dao.permission.MenuDao">
+    <sql id="basicColumn">
+        id,isMenu,menuName,viewLevelCode,url,status
+    </sql>
+    <sql id="basicValues">
+        #{id}, #{isMenu},#{menuName}, #{viewLevelCode}, #{url},#{status}
+    </sql>
+
+    <!-- 开发负责人：泊雨
+         功能说明：根据相关条件查询所属功能 -->
+    <select id="queryMenuList" parameterType="menuQuery" resultType="menuDO">
+        select distinct <include refid="basicColumn" />
+        from TopicMenus
+        WHERE id in
+        <foreach collection="ids" item="id" open="(" close=")"
+                 separator=",">
+            #{id}
+        </foreach>
+        order by viewLevelCode
+        limit 200
+    </select>
+
+
+</mapper>

@@ -1,0 +1,108 @@
+
+#parse("common/head_v1.vm")
+
+<body class="theme-default main-menu-animated">
+
+<script>var init = [];</script>
+<!-- Demo script --> <script src="${rc.contextPath}/assets/demo/demo.js"></script> <!-- / Demo script -->
+
+
+#parse("common/main_nav_menu_v1.vm")
+<div id="main-wrapper" style="padding-left:0px;">
+
+	
+
+	<div id="content-wrapper">
+		<ul class="breadcrumb breadcrumb-page">
+			<div class="breadcrumb-label text-light-gray">您当前的位置: </div>
+			<li><a href="#">Home</a></li>
+			<li class="active"><a href="#">日志查看</a></li>
+		</ul>
+		
+		<div class="row-furid" style="margin-top:10px;">
+			<div class="cols-xs-12">
+				<div class="panel-body">
+						<form id="frmLogSearch" class="form-inline" method="post">
+							<div class="form-group">
+								<label class="sr-only" for="startTime">跟踪ID</label>
+								<input type="text" class="form-control" id="startTime" name="traceId" placeholder="跟踪ID" value="$!traceId">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="startTime">操作人</label>
+								<input type="text" class="form-control" id="opreator" name="traceId" placeholder="操作人" value="$!opreator">
+							</div>
+							<button type="button" class="btn btn-primary" id="btnLogSearch">查询</button>
+					   </form>
+				</div>
+            </div>
+        </div>
+		
+		<div class="table-success panel-body" style="padding:0px;">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th style="width:160px;">操作</th>
+												<th style="width:80px;">操作人</th>
+												<th style="width:120px;">跟踪记录ID</th>
+												<th style="width:120px;">操作对象</th>
+												<th style="width:160px;">内容/结果</th>
+												<th style="width:280px;">变更内容</th>
+												<th style="width:160px;">描述</th>
+												<th style="width:180px;">操作时间</th>
+											</tr>
+										</thead>
+										<tbody>
+										#foreach($log in $!logList)
+											<tr>
+												<td>$!log.actName</td>
+												<td>$!log.opreator</td>
+												<td>$!log.traceId</td>
+												<td>$!log.itemId</td>
+												<td style="max-width: 120px;word-break: break-all;">$!log.context</td>
+												<td style="max-width: 180px;word-break: break-all;">
+													$!log.keyValue
+												</td>
+												<td>
+													$!log.desc
+												</td>
+												<td>$dateUtil.displayTimeStamp($log.time,'yyyy-MM-dd HH:mm:ss')</td>
+											</tr>
+										#end
+										</tbody>
+									</table>
+								</div>
+		
+	</div> <!-- / #content-wrapper -->
+	
+</div> <!-- / #main-wrapper -->
+ 
+
+<!-- Pixel Admin's javascripts -->
+
+<script src="${rc.contextPath}/assets/js/jquery-2.0.3.min.js"></script>
+<script src="${rc.contextPath}/assets/javascripts/bootstrap.min.js"></script>
+<script src="${rc.contextPath}/assets/javascripts/pixel-admin.min.js"></script>
+<script src="${rc.contextPath}/assets/js/lhgdialog/lhgcore.min.js"></script>
+<script src="${rc.contextPath}/assets/js/lhgdialog/lhgdialog.min.js"></script>
+<link href="${rc.contextPath}/assets/stylesheets/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+<script src="${rc.contextPath}/assets/js/bootstrap-datetimepicker.js"></script>
+<script src="${rc.contextPath}/assets/js/mt.core.js"></script>
+
+<script type="text/javascript">
+	init.push(function () {
+		// Javascript code here
+	})
+	window.PixelAdmin.start(init);
+	
+	$(document).ready(function (){
+	
+		$("#btnLogSearch").click(function (){
+			
+			$("#frmLogSearch").submit();
+			
+		});	
+	});
+</script>
+
+</body>
+</html>

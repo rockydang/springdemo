@@ -1,0 +1,37 @@
+<div class="col-lg-12">
+    <div style="padding:5px;" class="text-primary text-left col-md-3">
+        总记录数:$!query.rowCount &nbsp;
+
+    </div>
+    <ul class="pagination col-md-6">
+        #if($!query.currentPage==1)
+            <li class="paginate_button previous disabled">
+                <a href="#" >上一页</a>
+            </li>
+        #else
+            #set($prePage=$!query.currentPage - 1)
+            <li class="paginate_button previous">
+                <a href="#" data-page="$prePage">上一页</a>
+            </li>
+        #end
+        #if(4>=$!query.currentPage)
+            #set($fstart=1)
+        #else
+            #set($fstart=$!query.currentPage - 4)
+        #end
+        #set($fend=$!query.currentPage + 4)
+        #if($!query.pageCount < $!fend)
+            #set($fend = $!query.pageCount)
+        #end
+        #foreach($!pageindex in [$!fstart..$!fend])
+            <li class="paginate_button #if($!query.currentPage==$!pageindex) active #end"><a href="#"  data-page="$!pageindex">$!pageindex</a></li>
+        #end
+        #set($nextPage = $!query.currentPage+1)
+        #if($nextPage <= $!query.pageCount)
+            <li class="paginate_button next"><a href="#" data-page="$!nextPage">下一页</a></li>
+        #end
+    </ul>
+    <div   class="text-left col-md-2">
+        <input type="input" style="width:60px;disply:inline;" id="page2go" value="$!query.currentPage"  class="form-control"/>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>web</display-name>
+    <listener>
+        <description>用来注册一个Root应用上下文</description>
+        <display-name>contextLoaderListener</display-name>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- ==================== ServletContext Init Parameters ================= -->
+    <!-- Enable escaping of form submission contents -->
+    <context-param>
+        <description>HTML自动转义</description>
+        <param-name>defaultHtmlEscape</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <!-- Convenient ApplicationContext instantiation for web applications - http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html#context-create -->
+    <context-param>
+        <description>Root WebApplicationContext配置文件路径</description>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:spring/spring-*.xml</param-value>
+    </context-param>
+
+    <!-- ==================== Servlet Declaration ================= -->
+    <!-- The DispatcherServlet - http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-servlet -->
+    <!-- Figure: The request processing workflow in Spring Web MVC (high level) -->
+    <!-- Handles requests -->
+    <servlet>
+        <!-- DispatcherServlet is an expression of the "Front Controller" design pattern -->
+        <description>请求分发器（Front Controller）</description>
+        <servlet-name>spring</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <description>Servlet WebApplicationContext配置文件路径</description>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/display-servlet.xml</param-value>
+        </init-param>
+        <init-param>
+            <description>非Debug模式</description>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <!-- Configuring Asynchronous Request Processing - http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-async-configuration -->
+        <async-supported>true</async-supported>
+    </servlet>
+    <!-- ==================== Servlet Mappings ================= -->
+    <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
