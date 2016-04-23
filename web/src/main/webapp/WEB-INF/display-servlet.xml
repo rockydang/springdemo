@@ -31,7 +31,7 @@
             </list>
         </property>
     </bean>
-    <bean id="timeBasedAccessInterceptor" class="com.mogujie.service.springdemo.web.interceptor.TimeBasedAccessInterceptor">
+    <bean id="timeBasedAccessInterceptor" class="TimeBasedAccessInterceptor">
         <property name="openingTime" value="9" />
         <property name="closingTime" value="12" />
     </bean>-->
@@ -41,7 +41,7 @@
             <mvc:mapping path="/**" />
             &lt;!&ndash;ndash; 本地测试&ndash;&ndash;&gt;
             <mvc:exclude-mapping path="/userLogin"/>
-            <bean class="com.mogujie.service.springdemo.web.interceptor.TimeBasedAccessInterceptor">
+            <bean class="TimeBasedAccessInterceptor">
                 <property name="openingTime" value="9" />
                 <property name="closingTime" value="12" />
             </bean>
@@ -57,7 +57,7 @@
     <!--<mvc:annotation-driven/>-->
 
     <!-- controller-->
-    <context:component-scan base-package="com.mogujie.service.springdemo.web" />
+    <context:component-scan base-package="com.rockydang.service.springdemo.web" />
 
     <!-- for velocity view -->
     <bean id="velocityConfig"

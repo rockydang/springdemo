@@ -1,9 +1,0 @@
-
-<link href="${rc.contextPath}/assets/stylesheets/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
-<script src="${rc.contextPath}/assets/js/jquery-2.0.3.min.js"></script>
-<script src="${rc.contextPath}/assets/javascripts/bootstrap.min.js"></script>
-<script src="${rc.contextPath}/assets/javascripts/pixel-admin.min.js"></script>
-<script src="${rc.contextPath}/assets/js/lhgdialog/lhgcore.min.js"></script>
-<script src="${rc.contextPath}/assets/js/lhgdialog/lhgdialog.min.js"></script>
-<script src="${rc.contextPath}/assets/js/bootstrap-datetimepicker.js"></script>
-

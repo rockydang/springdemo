@@ -10,16 +10,16 @@
 
        <!-- 扫描package下的注解并且激活他们，所以<context:component-scan>做了<context:annotation-config>要做的事情-->
       <!--第一：发现bean（在包中查找@Component标签），第二激活额外的标签（例如@Atuowired） -->
-       <context:component-scan base-package="com.mogujie.service.springdemo.service"/>
+       <context:component-scan base-package="com.rockydang.service.springdemo.service"/>
 
        <beans>
-           <bean id="topicService" class="com.mogujie.service.springdemo.service.topic.impl.TopicServiceImpl"/>
+           <bean id="topicService" class="com.rockydang.service.springdemo.service.topic.impl.TopicServiceImpl"/>
            <!--set 方法注入-->
-           <bean id="beanDemo" class="com.mogujie.service.springdemo.service.topic.bean.BeanDemo">
+           <bean id="beanDemo" class="com.rockydang.service.springdemo.service.topic.bean.BeanDemo">
                <property name="beanA" ref="beanA"/>
                <property name="beanB" ref="beanB"/>
             </bean>
-           <bean id="beanA" class="com.mogujie.service.springdemo.service.topic.bean.BeanA"/>
-           <bean id="beanB" class="com.mogujie.service.springdemo.service.topic.bean.BeanB"/>
+           <bean id="beanA" class="com.rockydang.service.springdemo.service.topic.bean.BeanA"/>
+           <bean id="beanB" class="com.rockydang.service.springdemo.service.topic.bean.BeanB"/>
        </beans>
 </beans>
