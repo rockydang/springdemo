@@ -21,8 +21,6 @@ public class RedisTest extends  AbstractBootStrapTest{
     @Test
     public void testQueryArticleListTotal() throws Exception {
 
-      /*  LabelService labelService = context.getBean(LabelService.class);
-        labelService.queryLabelList(null);*/
 
     }
 }

@@ -2,24 +2,36 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-	   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/context
+              http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-lazy-init="false">
        <!-- 用来激活已经在application context中注册的bean  -->
-       <!--<context:annotation-config/>-->
+       <context:annotation-config/>
 
        <!-- 扫描package下的注解并且激活他们，所以<context:component-scan>做了<context:annotation-config>要做的事情-->
       <!--第一：发现bean（在包中查找@Component标签），第二激活额外的标签（例如@Atuowired） -->
        <context:component-scan base-package="com.rockydang.service.springdemo.service"/>
+       <!-- 使用注解配置切面 -->
+       <aop:aspectj-autoproxy/>
 
-       <beans>
-           <bean id="topicService" class="com.rockydang.service.springdemo.service.topic.impl.TopicServiceImpl"/>
-           <!--set 方法注入-->
-           <bean id="beanDemo" class="com.rockydang.service.springdemo.service.topic.bean.BeanDemo">
+      <bean class="com.rockydang.service.springdemo.common.aspect.LogAspect"></bean>
+
+       <!--<beans>
+           <bean id="topicService" class="TopicServiceImpl" scope="prototype">
+               <property name="guavaLocalLoadService" ref="guavaLocalLoadService"/>
+           </bean>
+           &lt;!&ndash;set 方法注入&ndash;&gt;
+           &lt;!&ndash;
+            <bean id="beanDemo" class="BeanDemo">
                <property name="beanA" ref="beanA"/>
                <property name="beanB" ref="beanB"/>
             </bean>
-           <bean id="beanA" class="com.rockydang.service.springdemo.service.topic.bean.BeanA"/>
-           <bean id="beanB" class="com.rockydang.service.springdemo.service.topic.bean.BeanB"/>
-       </beans>
+           <bean id="beanA" class="BeanA"/>
+           <bean id="beanB" class="BeanB"/>
+           &ndash;&gt;
+           <bean id="guavaLocalLoadService" class="GuavaLocalLoadServiceImpl" />
+       </beans>-->
 </beans>

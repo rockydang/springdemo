@@ -1,6 +1,6 @@
 package com.rockydang.service.springdemo.web;
 
-import com.rockydang.service.springdemo.service.topic.TopicService;
+import com.rockydang.service.springdemo.service.TopicService;
 import com.rockydang.service.springdemo.web.bean.BeanTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;

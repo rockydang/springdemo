@@ -1,4 +1,4 @@
-package com.rockydang.service.springdemo.service.topic.bean;
+package com.rockydang.service.springdemo.service.bean;
 
 import org.springframework.stereotype.Component;
 
@@ -10,4 +10,6 @@ public class BeanA {
     public BeanA() {
         System.out.println("init BeanA....");
     }
+
+
 }

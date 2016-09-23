@@ -22,4 +22,17 @@
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>-->
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>springdemo-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- ================= hystrix ============ -->
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-core</artifactId>
+			<version>1.4.12</version>
+		</dependency>
+	</dependencies>
 </project>

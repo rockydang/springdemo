@@ -1,4 +1,4 @@
-package com.rockydang.service.springdemo.service.topic.bean;
+package com.rockydang.service.springdemo.service.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
