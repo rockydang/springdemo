@@ -14,6 +14,7 @@
        <!-- 扫描package下的注解并且激活他们，所以<context:component-scan>做了<context:annotation-config>要做的事情-->
       <!--第一：发现bean（在包中查找@Component标签），第二激活额外的标签（例如@Atuowired） -->
        <context:component-scan base-package="com.rockydang.service.springdemo.service"/>
+       <!--<context:component-scan base-package="com.rockydang.service.springdemo"/>-->
        <!-- 使用注解配置切面 -->
        <aop:aspectj-autoproxy/>
 

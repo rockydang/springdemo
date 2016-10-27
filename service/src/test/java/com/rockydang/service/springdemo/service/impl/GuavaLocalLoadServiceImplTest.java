@@ -38,8 +38,6 @@ public class GuavaLocalLoadServiceImplTest extends AbstractBootStrapTest {
             //c
             String str3 = guavaLocalLoadService.queryContentFromLocalCache(testListKey);
             System.out.println("Str3=="+str3);
-
-
         }
     }
 }

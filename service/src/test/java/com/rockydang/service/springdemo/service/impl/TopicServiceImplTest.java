@@ -9,8 +9,13 @@ import org.junit.Test;
  */
 public class TopicServiceImplTest extends AbstractBootStrapTest {
 
-    @Test
+
+
+//    @Test
     public void testQueryTopicInfo() throws Exception {
+
+
+
 
 //        TopicService topicService = context.getBean(TopicService.class);
 

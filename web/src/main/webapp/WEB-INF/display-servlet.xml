@@ -49,15 +49,16 @@
     </mvc:interceptors>-->
 
     <!--在利用spring的mvc开发过程中，需要将User对象从session中取出来使用-->
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+  <!--  <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="customArgumentResolver"><ref bean="userArgumentResolver"/> </property>
-    </bean>
+    </bean>-->
 
     <!--如果使用HandlerMappint拦截器则注释以上注册驱动的方法-->
-    <!--<mvc:annotation-driven/>-->
+    <mvc:annotation-driven/>
 
     <!-- controller-->
     <context:component-scan base-package="com.rockydang.service.springdemo.web" />
+    <!--<context:component-scan base-package="com.rockydang.service.springdemo"/>-->
 
     <!-- for velocity view -->
     <bean id="velocityConfig"

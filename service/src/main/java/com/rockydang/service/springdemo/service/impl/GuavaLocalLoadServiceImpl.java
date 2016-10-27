@@ -17,7 +17,6 @@ public class GuavaLocalLoadServiceImpl implements GuavaLocalLoadService, Initial
 
     private static LoadingCache<TestListKey, String> loadingCache;
 
-
     @Override
     public String testScope() {
         System.out.println("scope....");
