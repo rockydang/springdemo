@@ -44,7 +44,8 @@ public class HelloController {
         System.out.println("id===" + id);
         try {
             ServletContext servletContext = request.getSession().getServletContext();
-            WebApplicationContext webApplicationContext1 = WebApplicationContextUtils.getWebApplicationContext(servletContext, "org.springframework.web.servlet.FrameworkServlet.CONTEXT.spring");
+            WebApplicationContext webApplicationContext1 = WebApplicationContextUtils.getWebApplicationContext(servletContext,
+                    "org.springframework.web.servlet.FrameworkServlet.CONTEXT.springxxx");
 
             //1.通过子容器获取子容器的bean;
             Object childBean = webApplicationContext1.getBean("testController");

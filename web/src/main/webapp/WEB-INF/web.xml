@@ -35,7 +35,7 @@
     <servlet>
         <!-- DispatcherServlet is an expression of the "Front Controller" design pattern -->
         <description>请求分发器（Front Controller）</description>
-        <servlet-name>spring</servlet-name>
+        <servlet-name>springxxx</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <description>Servlet WebApplicationContext配置文件路径</description>
@@ -57,7 +57,7 @@
     </servlet>
     <!-- ==================== Servlet Mappings ================= -->
     <servlet-mapping>
-        <servlet-name>spring</servlet-name>
+        <servlet-name>springxxx</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     <session-config>
