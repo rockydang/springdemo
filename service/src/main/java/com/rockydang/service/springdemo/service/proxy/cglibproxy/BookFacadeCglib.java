@@ -1,8 +1,15 @@
 package com.rockydang.service.springdemo.service.proxy.cglibproxy;
 
+import com.rockydang.service.springdemo.service.proxy.util.GeneratorClass;
+import org.springframework.cglib.core.ClassGenerator;
+import org.springframework.cglib.core.DebuggingClassWriter;
+import org.springframework.cglib.core.DefaultGeneratorStrategy;
+import org.springframework.cglib.core.GeneratorStrategy;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
+import org.springframework.cglib.transform.TransformingClassGenerator;
+import org.springframework.cglib.transform.impl.AddPropertyTransformer;
 
 import java.lang.reflect.Method;
 
@@ -28,6 +35,7 @@ public class BookFacadeCglib implements MethodInterceptor {
         enhancer.setSuperclass(this.target.getClass());
         // 回调方法
         enhancer.setCallback(this);
+
         // 创建代理对象
         return enhancer.create();
     }
