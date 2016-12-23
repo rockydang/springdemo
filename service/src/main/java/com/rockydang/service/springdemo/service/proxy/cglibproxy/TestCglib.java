@@ -14,9 +14,6 @@ public class TestCglib {
         BookFacadeCglib cglib = new BookFacadeCglib();
         BookFacadeCglibImpl bookCglib = (BookFacadeCglibImpl) cglib.getInstance(new BookFacadeCglibImpl());
         System.out.println("className=" + bookCglib.getClass().getName());
-
-
-
         bookCglib.addBook();
     }
 }
