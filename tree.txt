@@ -1,0 +1,107 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] springdemo
+[INFO] springdemo dao
+[INFO] springdemo common
+[INFO] springdemo service
+[INFO] springdemo-web Maven Webapp
+[INFO] springdemo api
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building springdemo 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ springdemo ---
+[INFO] com.rockydang.service:springdemo:pom:1.0.0-SNAPSHOT
+[INFO] +- org.springframework:spring-context:jar:4.0.6.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:4.0.6.RELEASE:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.springframework:spring-beans:jar:4.0.6.RELEASE:compile
+[INFO] |  +- org.springframework:spring-core:jar:4.0.6.RELEASE:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.3:compile
+[INFO] |  \- org.springframework:spring-expression:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:4.0.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-jdbc:jar:4.0.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:4.0.6.RELEASE:compile
+[INFO] \- org.aspectj:aspectjweaver:jar:1.8.7:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building springdemo dao 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ springdemo-dao ---
+[INFO] com.rockydang.service:springdemo-dao:jar:1.0-SNAPSHOT
+[INFO] +- org.springframework:spring-context:jar:4.0.6.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:4.0.6.RELEASE:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.springframework:spring-beans:jar:4.0.6.RELEASE:compile
+[INFO] |  +- org.springframework:spring-core:jar:4.0.6.RELEASE:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.3:compile
+[INFO] |  \- org.springframework:spring-expression:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:4.0.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-jdbc:jar:4.0.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:4.0.6.RELEASE:compile
+[INFO] \- org.aspectj:aspectjweaver:jar:1.8.7:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building springdemo common 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ springdemo-common ---
+[INFO] com.rockydang.service:springdemo-common:jar:1.0-SNAPSHOT
+[INFO] +- com.alibaba:fastjson:jar:1.2.9:compile
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- net.sourceforge.htmlunit:htmlunit:jar:2.21:compile
+[INFO] |  +- xalan:xalan:jar:2.7.2:compile
+[INFO] |  |  \- xalan:serializer:jar:2.7.2:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  \- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  +- org.apache.httpcomponents:httpmime:jar:4.5.2:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.10:compile
+[INFO] |  +- net.sourceforge.htmlunit:htmlunit-core-js:jar:2.17:compile
+[INFO] |  +- net.sourceforge.htmlunit:neko-htmlunit:jar:2.21:compile
+[INFO] |  |  \- xerces:xercesImpl:jar:2.11.0:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.4.01:compile
+[INFO] |  +- net.sourceforge.cssparser:cssparser:jar:0.9.18:compile
+[INFO] |  |  \- org.w3c.css:sac:jar:1.3:compile
+[INFO] |  +- commons-io:commons-io:jar:2.4:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  \- org.eclipse.jetty.websocket:websocket-client:jar:9.2.15.v20160210:compile
+[INFO] |     +- org.eclipse.jetty:jetty-util:jar:9.2.15.v20160210:compile
+[INFO] |     +- org.eclipse.jetty:jetty-io:jar:9.2.15.v20160210:compile
+[INFO] |     \- org.eclipse.jetty.websocket:websocket-common:jar:9.2.15.v20160210:compile
+[INFO] |        \- org.eclipse.jetty.websocket:websocket-api:jar:9.2.15.v20160210:compile
+[INFO] +- org.jsoup:jsoup:jar:1.9.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.9:compile
+[INFO] +- com.google.guava:guava:jar:19.0:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] +- org.apache.commons:commons-collections4:jar:4.1:compile
+[INFO] +- org.springframework:spring-asm:jar:3.0.7.RELEASE:compile
+[INFO] +- com.alibaba:SimpleEL:jar:0.1.7:compile
+[INFO] |  \- com.sun:tools:jar:1.6.0:system
+[INFO] +- org.projectlombok:lombok:jar:1.16.6:compile
+[INFO] +- org.springframework:spring-context:jar:4.0.6.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:4.0.6.RELEASE:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.springframework:spring-beans:jar:4.0.6.RELEASE:compile
+[INFO] |  +- org.springframework:spring-core:jar:4.0.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-expression:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:4.0.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-jdbc:jar:4.0.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:4.0.6.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:4.0.6.RELEASE:compile
+[INFO] \- org.aspectj:aspectjweaver:jar:1.8.7:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building springdemo service 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
