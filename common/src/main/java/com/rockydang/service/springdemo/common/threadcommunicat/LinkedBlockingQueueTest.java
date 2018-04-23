@@ -12,11 +12,10 @@ import java.util.concurrent.TimeUnit;
  */
 public class LinkedBlockingQueueTest {
     public static void main(String[] args) {
-        LinkedBlockingQueue<String> queue = new LinkedBlockingQueue<String>();
+        LinkedBlockingQueue<String> queue = new LinkedBlockingQueue<>();
         ExecutorService threadPool = Executors.newFixedThreadPool(10);
         threadPool.execute(new Producer(queue));
         threadPool.execute(new Consumer(queue));
-
 
         if(!threadPool.isShutdown()){
             threadPool.shutdown();
@@ -30,6 +29,7 @@ public class LinkedBlockingQueueTest {
 
     }
 }
+
 class Producer extends Thread{
     private LinkedBlockingQueue<String> queue;
 

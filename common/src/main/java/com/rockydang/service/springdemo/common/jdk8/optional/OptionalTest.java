@@ -23,7 +23,7 @@ public class OptionalTest {
 
         System.out.println("---------------------------");*/
 
-        Company company = new Company();
+  /*      Company company = new Company();
         company.setName("a");
 
         Employee employee = new Employee();
@@ -44,9 +44,15 @@ public class OptionalTest {
                 .filter(item -> CollectionUtils.isNotEmpty(a))
                 .orElse(Lists.newArrayList("111"));
 
-        System.out.println(couponInfoBeanList);
+        System.out.println(couponInfoBeanList);*/
 
+        Employee employee = new Employee();
+        employee.setName("bb");
+
+        String name = "";
+        if (employee != null) {
+            name = Optional.ofNullable(employee.getName()).orElse("aaa");
+        }
+        System.out.println(name);
     }
-
-
 }

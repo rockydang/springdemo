@@ -22,11 +22,11 @@ public class StreamTest10 {
         Student student3 = new Student("li", 10, 80);
         List<Student> studentList = Arrays.asList(student1, student2, student3);
 
-       /* //按名字分组
+       //按名字分组
         Map<String, List<Student>> nameStudentMap = studentList.stream()
                 .collect(Collectors.groupingBy(Student::getName));
         System.out.println(nameStudentMap);
-
+/*
         //按分数分组
         Map<Integer, List<Student>> scoreStudentMap = studentList.stream()
                 .collect(Collectors.groupingBy(Student::getScore));
