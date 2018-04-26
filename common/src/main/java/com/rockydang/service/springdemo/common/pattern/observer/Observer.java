@@ -6,6 +6,5 @@ package com.rockydang.service.springdemo.common.pattern.observer;
  * @author yanxiao  on 2018/4/26.
  */
 public interface Observer {
-
     void update(String message);
 }
