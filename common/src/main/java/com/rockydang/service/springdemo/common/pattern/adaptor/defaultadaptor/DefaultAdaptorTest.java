@@ -8,7 +8,6 @@ package com.rockydang.service.springdemo.common.pattern.adaptor.defaultadaptor;
 public class DefaultAdaptorTest {
 
     public static void main(String[] args) {
-
         ConcreteAdaptorService adaptorService = new ConcreteAdaptorService();
         adaptorService.serviceOperation1();
         adaptorService.serviceOperation2();
